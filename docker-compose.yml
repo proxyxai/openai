@@ -32,7 +32,7 @@ services:
       - EMAIL_BALANCE=3.00
         # 可选设置 一级域名,仅作为系统邮件模版内容
       - XAI_SERVICE=proxyxai.com
-	      # 可选设置 邮件服务
+        # 可选设置 邮件服务
       - EMAIL_SMTP=smtp.gmail.com
       - EMAIL_PORT=465
       - EMAIL_SENDER=
