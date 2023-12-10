@@ -1,0 +1,89 @@
+version: '3.9'
+services:
+  proxyxai:
+    container_name: proxyxai
+    image: proxyxai/openai
+    pull_policy: always
+    restart: always
+    depends_on:
+      proxyxai-redis:
+        condition: service_started
+      proxyxai-postgres:
+        condition: service_healthy
+    ports:
+      - 3443:3443
+    environment:
+      - TZ=Asia/Shanghai
+      - PORT=3443
+      - OPENAI_API_BASE=api.openai.com
+      - POSTGRES_DSN=user=postgres password=pass host=proxyxai-postgres dbname=postgres port=5432 sslmode=disable TimeZone=Asia/Shanghai
+      - REDIS_ADDR=proxyxai-redis:6379
+      - REDIS_PASS=
+        # 必选设置 初始root用户;格式 root:邮箱地址:管理Key;请注意管理Key为51个字符,开头必须是 sk-Xvs
+      - INIT_USERS=root:root@proxyxai.com:sk-XvsiLNxHImLIn0chuNDdi5wTs5WaoEWNcd87Z62etZZ1bz7z
+        # 可选设置 启动录入OpenAI API Keys;格式 sk-xxx,sk-xxx,sk-xxx
+      - INIT_KEYS=
+      - SINGLE_MODE=true
+        # 每100次请求落盘Redis
+      - STATS_INTERVAL=100
+        # 开通子账号管理权限需要的最小额度
+      - SUB_MIN_BALANCE=20
+        # 邮件通知不足额度提醒
+      - EMAIL_BALANCE=3.00
+        # 可选设置 一级域名,仅作为系统邮件模版内容
+      - XAI_SERVICE=proxyxai.com
+	      # 可选设置 邮件服务
+      - EMAIL_SMTP=smtp.gmail.com
+      - EMAIL_PORT=465
+      - EMAIL_SENDER=
+      - EMAIL_AUTH=
+      - EMAIL_PASS=
+      - EMAIL_TLS=true
+    networks:
+      - proxyxai-network
+  proxyxai-postgres:
+    container_name: proxyxai-postgres
+    image: postgres:16
+    pull_policy: always
+    restart: always
+    user: postgres
+    environment:
+      TZ: "Asia/Shanghai"
+      PGTZ: "Asia/Shanghai"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "pass"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready",
+          "-q",
+          "-d",
+          "postgres",
+          "-U",
+          "postgres"
+        ]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+    networks:
+      - proxyxai-network
+  proxyxai-redis:
+    container_name: proxyxai-redis
+    image: redis:alpine
+    pull_policy: always
+    restart: always
+    volumes:
+      - redis_data:/data
+    environment:
+      - TZ=Asia/Shanghai
+    networks:
+      - proxyxai-network
+volumes:
+  redis_data:
+  postgres_data:
+networks:
+  proxyxai-network:
+    driver: bridge
