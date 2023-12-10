@@ -23,6 +23,10 @@ graph TD
     style F fill:#ABEBC6
 ```
 
+## 授权依赖
+
+需要将待部署的海外主机的出口 IP 添加到我们信任白名单,代理系统才能完成认证启动
+
 ## 授权部署
 
 1. API  `docker-compose -f docker-compose.yml up -d` 一键拉起,默认启动端口是 3443
