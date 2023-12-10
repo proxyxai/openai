@@ -5,7 +5,7 @@ https://proxyxai.com
 ## 实现原理
 
 ```mermaid
-graph LR
+graph TD
     A(客户端)
     A -- 使用愚公代理分发的虚拟Key进行请求 --> B(愚公代理)
     B -- 从Key池中轮询获取一个 OpenAI API Key --> C(OpenAI API Key)
