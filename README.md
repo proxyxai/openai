@@ -2,6 +2,25 @@
 
 https://proxyxai.com
 
+## 实现原理
+
+```mermaid
+graph LR
+    A(客户端)
+    A -- 使用愚公代理分发的虚拟Key进行请求 --> B(愚公代理)
+    B -- 从Key池中轮询获取一个 OpenAI API Key --> C(OpenAI API Key)
+    C -- 请求 --> D(OpenAI API)
+    D -- 返回5xx错误 --> E[愚公代理丢弃错误并重试]
+    E -- 重试 --> B
+    D -- 正常响应 --> F[返回给客户端]
+    style A fill:#58C1B2
+    style B fill:#F7DC6F
+    style C fill:#F1948A
+    style D fill:#85C1E9
+    style E fill:#F0E68C
+    style F fill:#ABEBC6
+```
+
 ## 授权部署 api
 
 `docker-compose -f docker-compose.yml up -d` 一键拉起,默认启动端口是 3443
