@@ -43,4 +43,4 @@ graph TD
 1. 录入 OpenAI API Keys,操作请求 `curl -X POST -H "Authorization: $key" -d '{"SecretKey": "sk-xxx"}' https://api.proxyxai.com/x-keys', 录入成功后返回 HTTP 状态码 200
 2. 在子账号系统分配子账号,即可下发使用
 
-?> 这里使用 root key 请求管理API;录入的 OpenAI API Keys 如果失效,系统将全自动清理,不再需要人工干预
+这里使用 root key 请求管理API;录入的 OpenAI API Keys 如果失效,系统将全自动清理,不再需要人工干预
