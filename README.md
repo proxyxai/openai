@@ -18,6 +18,6 @@ https://proxyxai.com
 
 我们以 https://proxyxai.com 说明部署结构
 
-- 部署 api.proxyxai.com , 启动了 3443 端口, 然后前面可以通过一个 nginx 服务将 http://api.proxyxai.com 80/443 关联到 api 服务的 3443 端口
+- 部署 api.proxyxai.com , 启动了 3443 端口, 配置一个 nginx 服务将 api.proxyxai.com 80/443 关联到 api 服务的 3443 端口
 - 部署 usage.proxyxai.com, nginx 配置 usage.proxyxai.com 请求关联到 pages/billing 静态文件目录即可
 - 部署 sub.proxyxai.com, nginx 配置 sub.proxyxai.com 请求关联到 pages/user 静态文件目录即可
