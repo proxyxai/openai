@@ -66,4 +66,4 @@ graph TD
 
 这里的 $key 是上面部署 docker-compose.yml 里面的root key 请求管理API;录入的 OpenAI API Keys 如果失效,系统将全自动清理,不再需要人工干预
 
-更多 API 管理细节可以阅读 [proxyxai.com](https://proxyxai.com)
+更多 API 管理细节可以阅读 [proxyxai.com](https://proxyxai.com/#/api)
