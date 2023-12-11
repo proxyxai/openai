@@ -44,7 +44,7 @@ graph TD
 
 ## 初始设置
 
-1. 录入 OpenAI API Keys,操作请求 `curl -X POST -H "Authorization: $key" -d '{"SecretKey": "sk-xxx"}' https://api.proxyxai.com/x-keys', 录入成功后返回 HTTP 状态码 200
+1. 录入 OpenAI API Keys,操作请求 `curl -X POST -H "Authorization: $key" -d '{"SecretKey": "sk-xxx"}' https://api.proxyxai.com/x-keys`, 录入成功后返回 HTTP 状态码 200
 2. 在子账号系统分配子账号,即可下发使用
 
 这里的 $key 是上面部署 docker-compose.yml 里面的root key 请求管理API;录入的 OpenAI API Keys 如果失效,系统将全自动清理,不再需要人工干预
