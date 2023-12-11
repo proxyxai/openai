@@ -27,7 +27,23 @@ graph TD
 
 需要将待部署的海外主机的出口 IP 添加到我们信任白名单,代理系统才能完成认证启动
 
-## 授权部署
+## 资源依赖
+
+推荐 AWS t3.small 机型, 或者一般的海外主机2核2G配置
+
+## 环境安装
+
+依赖 docker 环境以及 docker-compose 容器管理工具
+ 
+```
+1. yum -y install docker
+2. curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+3. chmod +x /usr/local/bin/docker-compose
+4. curl -L https://github.com/proxyxai/openai/blob/main/docker-compose.yml -o docker-compose.yml
+5. docker-compose -f docker-compose.yml up -d
+```
+
+## 部署说明
 
 1. API  `docker-compose -f docker-compose.yml up -d` 一键拉起,默认启动端口是 3443
 2. 余额查询(静态资源) 可将 pages/billing 目录独立部署在 nginx 即可 
@@ -45,6 +61,9 @@ graph TD
 ## 初始设置
 
 1. 录入 OpenAI API Keys,操作请求 `curl -X POST -H "Authorization: $key" -d '{"SecretKey": "sk-xxx"}' https://api.proxyxai.com/x-keys`, 录入成功后返回 HTTP 状态码 200
-2. 在子账号系统分配子账号,即可下发使用
+2. 录入以后,因为系统默认2小时自动加载一次 Keys 到内存,所有如果需要立即生效, 可以重启即刻加载 `docker-compose down;docker-compose -f docker-compose.yml up -d`
+3. 在子账号系统分配子账号,即可下发使用
 
 这里的 $key 是上面部署 docker-compose.yml 里面的root key 请求管理API;录入的 OpenAI API Keys 如果失效,系统将全自动清理,不再需要人工干预
+
+更多 API 管理细节可以阅读 [proxyxai.com](https://proxyxai.com)
