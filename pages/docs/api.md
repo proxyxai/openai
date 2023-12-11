@@ -7,7 +7,7 @@
 ### 请求
 
 ```bash
-curl -X POST -H "Authorization: Bearer $key" -d '{"Name": "child-1", "Email": "child-1@open-assistant.cn", "CreditGranted": 100}' https://api.open-assistant.cn/x-users
+curl -X POST -H "Authorization: Bearer $key" -d '{"Name": "child-1", "Email": "child-1@proxyxai.com", "CreditGranted": 100}' https://api.proxyxai.com/x-users
 ```
 
 ### 响应
@@ -51,7 +51,7 @@ curl -X POST -H "Authorization: Bearer $key" -d '{"Name": "child-1", "Email": "c
         }
       ],
       "CreditGranted": 100,
-      "Email": "child-1@open-assistant.cn",
+      "Email": "child-1@proxyxai.com",
       "HardLimit": 100,
       "Level": 0,
       "Name": "child-1",
@@ -93,12 +93,12 @@ SecretKey 子账号的API Key,系统生成唯一账号Key,只在账号创建之�
 ### 请求
 
 ```bash
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-users/7"
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-users/child-1"
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-users/child-1@open-assistant.cn"
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-users?id=7"
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-users?name=xxx"
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-users?email=xxx"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-users/7"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-users/child-1"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-users/child-1@proxyxai.com"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-users?id=7"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-users?name=xxx"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-users?email=xxx"
 ```
 
 ### 响应
@@ -127,7 +127,7 @@ curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-use
     "Child": 0,
     "Requests": 0,
     "Status": true,
-    "Email": "child-1@open-assistant.cn",
+    "Email": "child-1@proxyxai.com",
     "PartialKey": "0Pi7OZZnbfhTmxJ3zJsa",
     "SecretKey": "***",
     "CreatedAt": "2023-10-24T18:46:12.306937+08:00",
@@ -147,8 +147,8 @@ curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-use
 
 ### 请求
 ```
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-users"
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-users?page=1&size=10"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-users"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-users?page=1&size=10"
 ```
 
 ### 响应
@@ -176,7 +176,7 @@ curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-use
     "Child": 0,
     "Requests": 0,
     "Status": true,
-    "Email": "child-2@open-assistant.cn",
+    "Email": "child-2@proxyxai.com",
     "PartialKey": "eQGRm3H3tyDDdCzGEACC",
     "SecretKey": "***",
     "CreatedAt": "2023-10-24T18:49:53.71827+08:00",
@@ -204,7 +204,7 @@ curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-use
     "Child": 0,
     "Requests": 0,
     "Status": true,
-    "Email": "child-1@open-assistant.cn",
+    "Email": "child-1@proxyxai.com",
     "PartialKey": "0Pi7OZZnbfhTmxJ3zJsa",
     "SecretKey": "***",
     "CreatedAt": "2023-10-24T18:46:12.306937+08:00",
@@ -213,27 +213,27 @@ curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-use
 ]
 ```
 
-?> 仅能获取直接子账号,参数可以传递账号ID,也可以传递账号Name,一次最多返回100条数据记录,如果子账号数量超过100条,则需要分页查询;请注意 curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-users" 全部子账号查询的时候,要调用核心API,每次需要系统手续费$0.002
+?> 仅能获取直接子账号,参数可以传递账号ID,也可以传递账号Name,一次最多返回100条数据记录,如果子账号数量超过100条,则需要分页查询;请注意 curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-users" 全部子账号查询的时候,要调用核心API,每次需要系统手续费$0.002
 
 ## 4. 获取指定后代账号
 
 ### 请求
 
 ```bash
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-dna/7"
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-dna/child-1"
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-dna/child-1@open-assistant.cn"
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-dna?id=7"
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-dna?name=xxx"
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-dna?email=xxx"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-dna/7"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-dna/child-1"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-dna/child-1@proxyxai.com"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-dna?id=7"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-dna?name=xxx"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-dna?email=xxx"
 ```
 
 ## 5. 获取所有后代账号
 
 ### 请求
 ```
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-dna"
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-dna?page=1&size=10"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-dna"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/x-dna?page=1&size=10"
 ```
 
 ?> 与仅获取直接子账号的接口不同，此接口旨在获取当前账号的所有下级账号，包括子账号的子账号,子账号的子账号...，即获取所有后代账号。
@@ -242,9 +242,9 @@ curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/x-dna
 
 ### 请求
 ```
-curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": 100}' "https://api.open-assistant.cn/x-users/7"
-curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": 100}' "https://api.open-assistant.cn/x-users/child-1"
-curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": -10}' "https://api.open-assistant.cn/x-users/child-1"
+curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": 100}' "https://api.proxyxai.com/x-users/7"
+curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": 100}' "https://api.proxyxai.com/x-users/child-1"
+curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": -10}' "https://api.proxyxai.com/x-users/child-1"
 ```
 
 ### 充值响应
@@ -292,7 +292,7 @@ curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": -10}' "https:/
       ],
       "Balance": 180,
       "CreditGranted": 80,
-      "Email": "child-1@open-assistant.cn",
+      "Email": "child-1@proxyxai.com",
       "HardLimit": 200,
       "Level": 0,
       "Name": "child-1",
@@ -357,7 +357,7 @@ curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": -10}' "https:/
       ],
       "Balance": 180,
       "CreditGranted": -50,
-      "Email": "child-1@open-assistant.cn",
+      "Email": "child-1@proxyxai.com",
       "HardLimit": 200,
       "Level": 0,
       "Name": "child-1",
@@ -381,8 +381,8 @@ Balance 账号总余额,其值为 CreditBalance 各个充值卡所剩余额 bala
 ## 7. 为子账号充值并自定义过期时间
 
 ```bash
-curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": 10, "Days": 30}' https://api.open-assistant.cn/x-users/7
-curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": 10, "Days": 30}' https://api.open-assistant.cn/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": 10, "Days": 30}' https://api.proxyxai.com/x-users/7
+curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": 10, "Days": 30}' https://api.proxyxai.com/x-users/child-1
 ```
 
 ?> 可以为子账号充值，并指定这次充值卡的有效期(如果不指定,默认是365天),参数 Days 用于设置充值卡额度的有效时间，其值可以是 0 到 365 之间的任意浮点数。到期未使用的额度会消失, 父账号可以在到期之前主动回收子账号未使用的卡额从而避免资损, 具体可以参考上面的扣减 API 操作
@@ -391,8 +391,8 @@ curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": 10, "Days": 30
 
 ### 请求
 ```
-curl -X PUT -H "Authorization: Bearer $key" -d '{"Rates": 2}' https://api.open-assistant.cn/x-users/7
-curl -X PUT -H "Authorization: Bearer $key" -d '{"Rates": 2}' https://api.open-assistant.cn/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"Rates": 2}' https://api.proxyxai.com/x-users/7
+curl -X PUT -H "Authorization: Bearer $key" -d '{"Rates": 2}' https://api.proxyxai.com/x-users/child-1
 ```
 
 ### 响应
@@ -447,7 +447,7 @@ curl -X PUT -H "Authorization: Bearer $key" -d '{"Rates": 2}' https://api.open-a
       ],
       "Balance": 260,
       "CreditGranted": 0,
-      "Email": "child-1@open-assistant.cn",
+      "Email": "child-1@proxyxai.com",
       "HardLimit": 300,
       "Level": 0,
       "Name": "child-1",
@@ -467,8 +467,8 @@ curl -X PUT -H "Authorization: Bearer $key" -d '{"Rates": 2}' https://api.open-a
 ### 请求
 
 ```bash
-curl -X PUT -H "Authorization: Bearer $key" -d '{"RateLimit": 5}' https://api.open-assistant.cn/x-users/7
-curl -X PUT -H "Authorization: Bearer $key" -d '{"RateLimit": 5}' https://api.open-assistant.cn/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"RateLimit": 5}' https://api.proxyxai.com/x-users/7
+curl -X PUT -H "Authorization: Bearer $key" -d '{"RateLimit": 5}' https://api.proxyxai.com/x-users/child-1
 ```
 
 ?> 参数可以传递账号ID,也可以传递账号Name,设定目标子账号每分钟最大请求5次
@@ -478,9 +478,9 @@ curl -X PUT -H "Authorization: Bearer $key" -d '{"RateLimit": 5}' https://api.op
 ### 请求
 
 ```bash
-curl -X PUT -H "Authorization: Bearer $key" -d '{"Email": "child-x@163.com"}' https://api.open-assistant.cn/x-users/7
-curl -X PUT -H "Authorization: Bearer $key" -d '{"Name": "child-x"}' https://api.open-assistant.cn/x-users/7
-curl -X PUT -H "Authorization: Bearer $key" -d '{"Name": "child-x", "Email": "child-x@163.com"}' https://api.open-assistant.cn/x-users/7
+curl -X PUT -H "Authorization: Bearer $key" -d '{"Email": "child-x@163.com"}' https://api.proxyxai.com/x-users/7
+curl -X PUT -H "Authorization: Bearer $key" -d '{"Name": "child-x"}' https://api.proxyxai.com/x-users/7
+curl -X PUT -H "Authorization: Bearer $key" -d '{"Name": "child-x", "Email": "child-x@163.com"}' https://api.proxyxai.com/x-users/7
 ```
 
 ?> 父账号可以更新其子账号的基本属性，例如在这个例子中，父账号将ID为7的子账号的邮箱（Email）和名称（Name）字段进行更新。可以分别单独更新每个字段，也可以一次性更新两个字段。
@@ -490,8 +490,8 @@ curl -X PUT -H "Authorization: Bearer $key" -d '{"Name": "child-x", "Email": "ch
 ### 请求
 
 ```bash
-curl -X DELETE -H "Authorization: Bearer $key"  https://api.open-assistant.cn/x-users/7
-curl -X DELETE -H "Authorization: Bearer $key"  https://api.open-assistant.cn/x-users/child-1
+curl -X DELETE -H "Authorization: Bearer $key"  https://api.proxyxai.com/x-users/7
+curl -X DELETE -H "Authorization: Bearer $key"  https://api.proxyxai.com/x-users/child-1
 ```
 
 ### 响应
@@ -553,7 +553,7 @@ curl -X DELETE -H "Authorization: Bearer $key"  https://api.open-assistant.cn/x-
 ### 请求
 
 ```bash
-curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/dashboard/x_user/info"
+curl -X GET -H "Authorization: Bearer $key" "https://api.proxyxai.com/dashboard/x_user/info"
 ```
 
 ## 13. 查询当前 key 一段日期的使用数据(最多查询12个月)
@@ -561,7 +561,7 @@ curl -X GET -H "Authorization: Bearer $key" "https://api.open-assistant.cn/dashb
 ### 请求
 
 ```bash
-curl GET -H "Authorization: Bearer $key"  "https://api.open-assistant.cn/v1/dashboard/billing/usage?start_date=2023-08-10&end_date=2023-11-18"
+curl GET -H "Authorization: Bearer $key"  "https://api.proxyxai.com/v1/dashboard/billing/usage?start_date=2023-08-10&end_date=2023-11-18"
 ```
 
 
@@ -570,8 +570,8 @@ curl GET -H "Authorization: Bearer $key"  "https://api.open-assistant.cn/v1/dash
 ### 请求
 
 ```bash
-curl -X PUT -H "Authorization: Bearer $key" -d '{"BillingEmail": "child-1@qq.com"}' https://api.open-assistant.cn/x-users/child-1
-curl -X PUT -H "Authorization: Bearer $key" -d '{"Alias": "bob"}' https://api.open-assistant.cn/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"BillingEmail": "child-1@qq.com"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"Alias": "bob"}' https://api.proxyxai.com/x-users/child-1
 ```
 
 ?> 在创建子账号的过程中，账号名称和邮箱地址的唯一性是系统默认的强制要求，这确保了每个账户的独立性和安全性。简言之，同一邮箱不能被用来注册多个账号。然而，与此相反的是，账单邮箱的设置则灵活得多。系统允许多个账户共用同一账单邮箱地址，这样做的好处是父账号可以将多个子账号的账单和系统通知集中到一个邮箱里，便于用户统一管理和查阅，大大提升了管理效率和用户体验。此外，账号别名的个性化设置允许用户以更具特色的方式标识和区分各个账号。通过这样的设计，用户能够更加方便地掌握各个账户的财务和通知信息，从而实现高效的账户管理。
@@ -585,7 +585,7 @@ curl -X PUT -H "Authorization: Bearer $key" -d '{"Alias": "bob"}' https://api.op
 
 ### 是否存在提供创建/充值子账号的web服务？
 
-[子账号](https://sub.open-assistant.cn) 系统，用户可以便捷地创建子账户，并且在创建过程中，系统会自动发送一封包含新生成的API调用密钥和基本使用说明的电子邮件至子账户所绑定的有效邮箱地址。因此，为了确保能够顺利接收到这些重要信息，用户在填写子账户的邮箱时必须确保邮箱地址是正确且有效的。这样的服务对于需要管理多个账户的用户来说，提供了极大的便利和效率。
+[子账号](https://sub.proxyxai.com) 系统，用户可以便捷地创建子账户，并且在创建过程中，系统会自动发送一封包含新生成的API调用密钥和基本使用说明的电子邮件至子账户所绑定的有效邮箱地址。因此，为了确保能够顺利接收到这些重要信息，用户在填写子账户的邮箱时必须确保邮箱地址是正确且有效的。这样的服务对于需要管理多个账户的用户来说，提供了极大的便利和效率。
 
 ### 创建子账号需要满足哪些条件？
 

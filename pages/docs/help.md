@@ -14,7 +14,7 @@
 1. 在自己的服务器上部署此服务，OpenAI Key 仅存储在自己的服务器上，确保安全。
 2. 在服务器上为每个账户分配一个 API Key。
 3. 在 OpenCat 客户端中，将 API Key 设置为服务器上创建的 Key。
-4. 在 OpenCat 客户端中，将自定义 OpenAI 域名设置为自己的服务器地址，例如：`https://api.open-assistant.cn`，并点击“自定义 API 域名”下的“验证”完成设置。
+4. 在 OpenCat 客户端中，将自定义 OpenAI 域名设置为自己的服务器地址，例如：`https://api.proxyxai.com`，并点击“自定义 API 域名”下的“验证”完成设置。
 
 ### ChatBox (Windows, Mac, Linux)
 
@@ -45,7 +45,7 @@
 使用以下命令部署 docker：
 
 ```markdown
-docker run --name=chatgpt -d -p 3000:3000 -e OPENAI_API_KEY="" -e BASE_URL="api.open-assistant.cn" -e PROTOCOL="https" yidadaa/chatgpt-next-web:latest
+docker run --name=chatgpt -d -p 3000:3000 -e OPENAI_API_KEY="" -e BASE_URL="api.proxyxai.com" -e PROTOCOL="https" yidadaa/chatgpt-next-web:latest
 ```
 
 将 `BASE_URL` 设置为本服务的 API 地址，`OPENAI_API_KEY` 保留为空。这样，访问网页版时，用户可以直接使用自己的 API Key。

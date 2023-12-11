@@ -1,4 +1,4 @@
-<img src="https://static.open-assistant.cn/openai/openai-logo-horizontal-flat-black.png" width="320"/>
+<img src="https://static.proxyxai.com/openai/openai-logo-horizontal-flat-black.png" width="320"/>
 
 ## 𝑶𝒑𝒆𝒏𝑨𝑰
 
@@ -10,11 +10,11 @@
 
 ## 实现原理
 
-![proxyxai](https://static.open-assistant.cn/proxyxai-lr.svg ':size=200%')
+![proxyxai](https://static.proxyxai.com/proxyxai-lr.svg ':size=200%')
 
 ?> Key 池录入了若干个不同高级别账户创建的 OpenAI API Keys，有效解决在超大规模请求下官方单个账号组织的 `TOKEN LIMITS` 和 `REQUEST AND OTHER LIMITS` 不足的问题。通常情况下，我们至少保留10个以上独立的 OpenAI 账号组织，以便从容应对大规模业务请求。单个组织的官方限制如下图所示。
 
-![open-limit](https://static.open-assistant.cn/open-assistant.png)
+![open-limit](https://static.proxyxai.com/open-assistant.png)
 
 ## 近期更新
 
@@ -26,25 +26,24 @@
 | 接入点   | BASE_URL / OPENAI_API_BASE_URL | OPENAI_API_KEY                                                 |
 | -------- | ------------------------------ | -------------------------------------------------------------- |
 | OpenAI   | api.openai.com                 | [OpenAI API Key](https://platform.openai.com/account/api-keys) |
-| 愚公(主) | api.open-assistant.cn          | sk-XvsQOaJBbqNYi0Oli2iyAqSeiL2fet1mPxXa01pA5TeuQoma            |
-| 愚公(备) | api.proxyxai.com               | sk-XvsQOaJBbqNYi0Oli2iyAqSeiL2fet1mPxXa01pA5TeuQoma            |
+| 愚公(主) | api.proxyxai.com               | sk-XvsQOaJBbqNYi0Oli2iyAqSeiL2fet1mPxXa01pA5TeuQoma            |
 | 愚公(备) | api.proxyxai.cn                | sk-XvsQOaJBbqNYi0Oli2iyAqSeiL2fet1mPxXa01pA5TeuQoma            |
 
-?> 如果您是开发者,只需将SDK中的API端点`api.openai.com`更改为`api.open-assistant.cn`,然后将 key 设置愚公提供的 key 即可, 请注意上面开发/测试 key 有模型和速率限制,可在下面 AI 服务站点简单测试试用,如果您是基础用户,可以在 [AI 助理](https://chat.open-assistant.cn) ( 设置-自定义接口-API key 填入) 直接使用
+?> 如果您是开发者,只需将SDK中的API端点`api.openai.com`更改为`api.proxyxai.com`,然后将 key 设置愚公提供的 key 即可, 请注意上面开发/测试 key 有模型和速率限制,可在下面 AI 服务站点简单测试试用,如果您是基础用户,可以在 [AI 助理](https://chat.proxyxai.com) ( 设置-自定义接口-API key 填入) 直接使用
 
 !> 特别提醒,随着 𝑨𝑰 技术日新月异的发展和普及,𝑶𝒑𝒆𝒏𝑨𝑰 服务访问量日益激增,官方服务不稳定是常态,遇到长时间调用失败的时候,请先看看官方的服务状态页了解情况 [status.openai.com](https://status.openai.com)
 
 ## 𝑨𝑰 服务
 
-- [助理-中国](https://chat.open-assistant.cn)
-- [助理-全球](https://talk.open-assistant.cn)
+- [助理-中国](https://chat.proxyxai.com)
+- [助理-全球](https://talk.proxyxai.com)
 - [助理-海外](https://talk-open.vercel.app)
-- [翻译](https://tr.open-assistant.cn)
+- [翻译](https://tr.proxyxai.com)
 
 ## 系统服务
 
-- [余额查询](https://usage.open-assistant.cn)
-- [子账号](https://sub.open-assistant.cn)
+- [余额查询](https://usage.proxyxai.com)
+- [子账号](https://sub.proxyxai.com)
 
 ## 概述
 

@@ -11,17 +11,17 @@
 3. 完善的成本分析工具,拥有从整体概览到逐笔明细账的所有消费详情
 4. 支持自主定价费率/速率/额度限制/充值等的子账户能力
 5. 开发者 𝐴𝑃𝐼 调用和 [𝑶𝒑𝒆𝒏𝑨𝑰 官方文档](https://platform.openai.com/docs/api-reference) 保持一致
-6. [余额查询](https://usage.open-assistant.cn)
-7. [子账号](https://sub.open-assistant.cn)
-8. [文档更新](https://docs.open-assistant.cn)
-9. [𝐴𝑃𝐼 地址](https://api.open-assistant.cn)
+6. [余额查询](https://usage.proxyxai.com)
+7. [子账号](https://sub.proxyxai.com)
+8. [文档更新](https://docs.proxyxai.com)
+9. [𝐴𝑃𝐼 地址](https://api.proxyxai.com)
 
 ## 常见开源SDK使用方式
 
 1. curl 请求
 
 ```bash
-curl https://api.open-assistant.cn/v1/chat/completions \
+curl https://api.proxyxai.com/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
   -d '{
@@ -45,7 +45,7 @@ client = OpenAI(
     # 将这里换成愚公代理授权分发的密钥
     api_key="sk-Xvsxxx",
     # 这里将官方API端点地址替换成愚公代理API端点地址
-    base_url="https://api.open-assistant.cn/v1"
+    base_url="https://api.proxyxai.com/v1"
 )
 
 chat_completion = client.chat.completions.create(
@@ -73,7 +73,7 @@ const { Configuration, OpenAIApi } = require("openai");
 
 const configuration = new Configuration({
   apiKey: "sk-Xvsxxx",
-  basePath: "https://api.open-assistant.cn/v1",
+  basePath: "https://api.proxyxai.com/v1",
 });
 const openai = new OpenAIApi(configuration);
 
@@ -95,7 +95,7 @@ console.log(completion);
 
 ```
 OPENAI_API_KEY=sk-Xvsxxxx
-OPENAI_API_BASE_URL=https://api.open-assistant.cn/v1
+OPENAI_API_BASE_URL=https://api.proxyxai.com/v1
 
 SMART_LLM=gpt-4-1106-preview
 ```
@@ -106,7 +106,7 @@ SMART_LLM=gpt-4-1106-preview
 
 ```
 api_key=sk-Xvsxxxx
-api_base=https://api.open-assistant.cn
+api_base=https://api.proxyxai.com
 ```
 
 3. MetaGPT 项目 [https://github.com/geekan/MetaGPT](https://github.com/geekan/MetaGPT)
@@ -114,7 +114,7 @@ api_base=https://api.open-assistant.cn
 请在这个文件里面 `https://github.com/geekan/MetaGPT/blob/main/config/config.yaml` 更改下面几个参数
 
 ```
-OPENAI_API_BASE=https://api.open-assistant.cn/v1
+OPENAI_API_BASE=https://api.proxyxai.com/v1
 OPENAI_API_KEY=sk-Xvsxxx
 ```
 
@@ -124,16 +124,16 @@ OPENAI_API_KEY=sk-Xvsxxx
 
 有以下几种可能：
 
-你域名可能配错了，请检查api_base配置是否正确，很多库（比如langchain）在配置api_base时，需要加上/v1的接口后缀，而不是直接一个域名，示例https://api.open-assistant.cn/v1
+你域名可能配错了，请检查api_base配置是否正确，很多库（比如langchain）在配置api_base时，需要加上/v1的接口后缀，而不是直接一个域名，示例https://api.proxyxai.com/v1
 
 ### 报错：Error 401: Incorrect APl key provided: sk-****： You can find your APl key at https://platform.openai.com/accour keys
 
-这是因为你没有配置请求的API接入地址为我们提供的地址，平台工作的原理就是代理API请求，因此你必须配置我们平台提供的API Base和API Key，将API改为https://api.open-assistant.cn + sk-Xvsxxxx 即可
+这是因为你没有配置请求的API接入地址为我们提供的地址，平台工作的原理就是代理API请求，因此你必须配置我们平台提供的API Base和API Key，将API改为https://api.proxyxai.com + sk-Xvsxxxx 即可
 
 ### 如果某个开源项目不支持配置api base怎么办？
 
-找到项目源码,将里面的API连接地址从 api.openai.com 改成 api.open-assistant.cn 即可
+找到项目源码,将里面的API连接地址从 api.openai.com 改成 api.proxyxai.com 即可
 
 ### 有限流吗？
 
-可在余额查询 [usage.open-assistant.cn](https://usage.open-assistant.cn) 获得 RPM 数据
+可在余额查询 [usage.proxyxai.com](https://usage.proxyxai.com) 获得 RPM 数据
