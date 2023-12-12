@@ -29,7 +29,7 @@ graph TD
 
 ## 资源依赖
 
-推荐 AWS t3.small 机型, 或者一般的海外主机2核2G配置
+推荐 AWS t3.small, t3.micro 等机型, 或者一般 2核2G 配置的海外主机, 最低配置要求 1核1G
 
 ## 环境安装
 
@@ -62,7 +62,7 @@ graph TD
 
 1. 录入 OpenAI API Keys,操作请求 `curl -X POST -H "Authorization: $key" -d '{"SecretKey": "sk-xxx"}' https://api.proxyxai.com/x-keys`, 录入成功后返回 HTTP 状态码 200
 2. 录入以后,因为系统默认2小时自动加载一次 Keys 到内存,所有如果需要立即生效, 可以重启即刻加载 `docker-compose down;docker-compose -f docker-compose.yml up -d`
-3. 在子账号系统分配子账号,即可下发使用
+3. 在子账号系统分配子账号额度,即可下发用户使用
 
 这里的 $key 是上面部署 docker-compose.yml 里面的root key 请求管理API;录入的 OpenAI API Keys 如果失效,系统将全自动清理,不再需要人工干预
 
