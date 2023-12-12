@@ -12,9 +12,7 @@
 
 ![proxyxai](https://static.proxyxai.com/proxyxai-lr.svg ':size=200%')
 
-?> Key 池录入了若干个不同高级别账户创建的 OpenAI API Keys，有效解决在超大规模请求下官方单个账号组织的 `TOKEN LIMITS` 和 `REQUEST AND OTHER LIMITS` 不足的问题。通常情况下，我们至少保留10个以上独立的 OpenAI 账号组织，以便从容应对大规模业务请求。单个组织的官方限制如下图所示。
-
-![open-limit](https://static.proxyxai.com/open-assistant.png)
+?> Key 池录入了若干个不同高级别账户创建的 OpenAI API Keys，有效解决在超大规模请求下官方单个账号组织的 `TOKEN LIMITS` 和 `REQUEST AND OTHER LIMITS` 不足的问题。通常情况下，我们至少保留10个以上独立的 OpenAI 账号组织，以便从容应对大规模业务请求。
 
 ## 近期更新
 
