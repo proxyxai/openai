@@ -73,3 +73,8 @@
 	opacity: 0;
 	transform: translateX(100%);
 }
+.dollar-sign {
+  font-style: italic;
+  font-weight: bold;
+  color: #4caf50;
+}
