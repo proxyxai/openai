@@ -117,14 +117,25 @@ function isValidEmail(email) {
 	return regex.test(email);
 }
 
-function extractNameFromEmail(email) {
-	return email.split('@')[0];
+function sanitizeName(name) {
+	if (isValidEmail(name)) {
+		name = name.split('@')[0];
+	}
+
+	const sanitized = name.replace(/[^\w\s]/gi, '');
+
+	if (sanitized.length < 4) {
+		const randomChars = Math.random().toString(36).substring(2, 6);
+		return sanitized + randomChars;
+	}
+
+	return sanitized;
 }
 
 document.getElementById('userForm').addEventListener('submit', function(event) {
 	event.preventDefault();
 	const key = getApiKey();
-	let name = document.getElementById('name').value.trim();
+	let name = sanitizeName(document.getElementById('name').value.trim());
 	const email = document.getElementById('email').value.trim();
 	const credit = Number(document.getElementById('credit').value.trim());
 	const rates = document.getElementById('rates').value.trim() ? Number(document.getElementById('rates').value.trim()) : null;
@@ -142,10 +153,6 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
 	if (!key || !name || !email || !credit) {
 		alert('请填写所有字段 / 𝑷𝒍𝒆𝒂𝒔𝒆 𝒇𝒊𝒍𝒍 𝒐𝒖𝒕 𝒂𝒍𝒍 𝒇𝒊𝒆𝒍𝒅𝒔');
 		return;
-	}
-
-	if (isValidEmail(name)) {
-		name = extractNameFromEmail(name);
 	}
 
 	const requestData = { Name: name, Email: email, CreditGranted: credit };
