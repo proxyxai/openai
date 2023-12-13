@@ -23,7 +23,7 @@ graph TD
     style F fill:#ABEBC6
 ```
 
-## Licensing and Dependencies
+## License Agreement
 
 The system is open for deployment. Users need to retain the signature `proxyxai.com provides basic support` at the bottom of the official service page, and link to [proxyxai.com](https://proxyxai.com). If you do not want to keep the signature, you need to obtain our authorization.
 
@@ -99,7 +99,7 @@ graph TD
     style F fill:#ABEBC6
 ```
 
-## 授权依赖
+## 授权协议
 
 系统开放部署，使用者需要在官方服务页面底部保留署名 `proxyxai.com 提供基础支撑`，同时指向链接 [proxyxai.com](https://proxyxai.com)。如果不想保留署名，需要获得我们的授权。
 
