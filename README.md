@@ -1,4 +1,4 @@
-# ProxyXAI
+# ProxyXAI-OpenAI
 
 https://proxyxai.com
 
@@ -74,7 +74,7 @@ By default, the docker-compose.yml file sets OPENAI_API_BASE to api.openai.com. 
 
 ---
 
-# ProxyXAI (中文)
+# ProxyXAI-OpenAI (中文)
 
 https://proxyxai.com
 
