@@ -12,12 +12,16 @@
 
 ![proxyxai](https://static.proxyxai.com/proxyxai-lr.svg ':size=200%')
 
-?> Key 池录入了若干个不同高级别账户创建的 OpenAI API Keys，有效解决在超大规模请求下官方单个账号组织的 `TOKEN LIMITS` 和 `REQUEST AND OTHER LIMITS` 不足的问题。通常情况下，我们至少保留10个以上独立的 OpenAI 账号组织，以便从容应对大规模业务请求。
+?> Key 池录入了若干个不同高级别账户创建的 OpenAI API Keys，有效解决在超大规模请求下官方单个账号组织的 `TOKEN LIMITS` 和 `REQUEST AND OTHER LIMITS` 不足的问题。通常情况下，我们至少保留10个以上独立的 OpenAI 账号组织，以便从容应对大规模业务请求
 
 ## 近期更新
 
 - 2023-11-12 新增扩展支持 Audio models 系列模型 whisper-1 (音频转文本) 和 tts-1,tts-1-1106,tts-1-hd,tts-1-hd-1106 (文本转音频)
 - 2023-11-07 新增扩展支持 GPT-4-Turbo 系列模型 gpt-4-1106-preview 和 gpt-4-vision-preview,以及 IMAGE 系列模型 dall-e-3
+
+## AI 交流群
+
+![wx](https://static.proxyxai.com/wx.jpg ':size=20%')
 
 ## 开发/测试 𝒌𝒆𝒚
 
@@ -51,7 +55,7 @@
 
 - 与官方 𝑶𝒑𝒆𝒏𝑨𝑰 𝑨𝑷𝑰 一致,完全兼容
 - 超级稳定,独家方案屏蔽大部分 𝑶𝒑𝒆𝒏𝑨𝑰 429/502/503/522 等官方服务不稳定问题
-- 按量计费,与官方各模型费率比例一致,总体约为官方2-3折
+- 按量计费,与官方各模型费率比例一致,区别于 OpenAI 官网零售 API 价格,我们专属渠道价格更加实惠,约为官方2-3折
 - 零信任安全设计,即便是我们数据库管理者也无法获取账号 𝒌𝒆𝒚 信息
 
 我们期待您的使用和反馈,让我们共同打造更好的 𝑨𝑰 生态服务体验

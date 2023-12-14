@@ -122,14 +122,14 @@ function sanitizeName(name) {
 		name = name.split('@')[0];
 	}
 
-	const sanitized = name.replace(/[^\w\s]/gi, '');
+	name = name.replace(/\p{P}|\p{S}|\p{C}|\p{Z}/gu, '');
 
-	if (sanitized.length < 4) {
+	if (!/\D/.test(name) || name.length < 4) {
 		const randomChars = Math.random().toString(36).substring(2, 6);
-		return sanitized + randomChars;
+		name = name + randomChars;
 	}
 
-	return sanitized;
+	return name;
 }
 
 document.getElementById('userForm').addEventListener('submit', function(event) {

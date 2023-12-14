@@ -9,7 +9,7 @@
 1. 支持通过 𝑶𝒑𝒆𝒏𝑨𝑰 兼容接口查询余额
 2. Prompt_token 和 Completion_tokens 独立计费,与 𝑶𝒑𝒆𝒏𝑨𝑰 官网模型定价一致
 3. 完善的成本分析工具,拥有从整体概览到逐笔明细账的所有消费详情
-4. 支持自主定价费率/速率/额度限制/充值等的子账户能力
+4. 支持自主定价费率/速率/额度限制/充值等的子账号能力
 5. 开发者 𝐴𝑃𝐼 调用和 [𝑶𝒑𝒆𝒏𝑨𝑰 官方文档](https://platform.openai.com/docs/api-reference) 保持一致
 6. [余额查询](https://usage.proxyxai.com)
 7. [子账号](https://sub.proxyxai.com)
