@@ -19,10 +19,6 @@
 - 2023-11-12 新增扩展支持 Audio models 系列模型 whisper-1 (音频转文本) 和 tts-1,tts-1-1106,tts-1-hd,tts-1-hd-1106 (文本转音频)
 - 2023-11-07 新增扩展支持 GPT-4-Turbo 系列模型 gpt-4-1106-preview 和 gpt-4-vision-preview,以及 IMAGE 系列模型 dall-e-3
 
-## AI 交流群
-
-![wx](https://static.proxyxai.com/wx.jpg ':size=20%')
-
 ## 开发/测试 𝒌𝒆𝒚
 
 | 接入点   | BASE_URL / OPENAI_API_BASE_URL | OPENAI_API_KEY                                                 |
