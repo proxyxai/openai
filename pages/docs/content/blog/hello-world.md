@@ -15,5 +15,5 @@ authors = ["Team ProxyXAI"]
 <img width="150" src="/images/logo.png"/>
 
 
-**因为,所以**
+**因为爱**
 </center>
