@@ -1,5 +1,6 @@
 +++
 title = "𝑷𝒓𝒐𝒙𝒚𝑿𝑨𝑰"
+template = "_layout.html"
 
 # The homepage contents
 [extra]

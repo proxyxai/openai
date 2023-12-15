@@ -127,6 +127,7 @@ post = "v0.1.0"
 weight = 20
 
 # Footer contents
+extra_filters = ["date"]
 [extra.footer]
 info = 'proxyxai.com'
 
