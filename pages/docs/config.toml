@@ -87,6 +87,8 @@ image = "images/logo.png"
 twitter_site = "proxyxai"
 twitter_creator = "proxyxai"
 og_locale = "en_US"
+facebook_publisher = ""
+facebook_author = ""
 
 ## JSON-LD
 [extra.schema]
