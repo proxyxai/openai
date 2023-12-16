@@ -21,3 +21,9 @@ top = false
 ## 子账号
 
 [sub.proxyxai.com](https://sub.proxyxai.com)
+
+## AI 助理
+- [助理-中国](https://chat.proxyxai.com)
+- [助理-全球](https://talk.proxyxai.com)
+- [助理-海外](https://talk-open.vercel.app)
+- [翻译](https://tr.proxyxai.com)
