@@ -1,8 +1,8 @@
 +++
 title = "Privacy Policy"
 description = "We do not use cookies and we do not collect any personal data."
-date = 2021-05-01T08:00:00+00:00
-updated = 2020-05-01T08:00:00+00:00
+date = 2023-12-01T08:00:00+00:00
+updated = 2023-12-05T08:00:00+00:00
 draft = false
 
 [extra]
@@ -19,9 +19,3 @@ __TLDR__: We do not use cookies and we do not collect any personal data.
 - No information is shared with advertising companies.
 - No information is mined and harvested for personal and behavioral trends.
 - No information is monetized.
-
-## Contact us
-
-[Contact us](https://github.com/aaranxu/adidoks) if you have any questions.
-
-Effective Date: _1st May 2021_
