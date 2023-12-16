@@ -407,7 +407,9 @@ curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": 10, "Days": 30
 curl -X PUT -H "Authorization: Bearer $key" -d '{"CreditGranted": 10, "Days": 30}' https://api.proxyxai.com/x-users/child-1
 ```
 
-?> 可以为子账号充值，并指定这次充值卡的有效期(如果不指定,默认是365天),参数 Days 用于设置充值卡额度的有效时间，其值可以是 0 到 365 之间的任意浮点数。到期未使用的额度会消失, 父账号可以在到期之前主动回收子账号未使用的卡额从而避免资损, 具体可以参考上面的扣减 API 操作
+<div class="infobox">
+可以为子账号充值，并指定这次充值卡的有效期(如果不指定,默认是365天),参数 Days 用于设置充值卡额度的有效时间，其值可以是 0 到 365 之间的任意浮点数。到期未使用的额度会消失, 父账号可以在到期之前主动回收子账号未使用的卡额从而避免资损, 具体可以参考上面的扣减 API 操作
+</div>
 
 ## 8. 调整子账号费率
 
