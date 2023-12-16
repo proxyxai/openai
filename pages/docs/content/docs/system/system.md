@@ -14,15 +14,8 @@ toc = true
 top = false
 +++
 
-## 余额查询
-
-[usage.proxyxai.com](https://usage.proxyxai.com)
-
-## 子账号
-
-[sub.proxyxai.com](https://sub.proxyxai.com)
-
-## AI 助理
+- [余额查询](https://usage.proxyxai.com)
+- [子账号](https://sub.proxyxai.com)
 - [助理-中国](https://chat.proxyxai.com)
 - [助理-全球](https://talk.proxyxai.com)
 - [助理-海外](https://talk-open.vercel.app)
