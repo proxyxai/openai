@@ -130,7 +130,7 @@ weight = 20
 
 # Footer contents
 [extra.footer]
-info = 'proxyxai.com'
+info = '©2022-{{ now() | date(format="%Y") }} — <a class="white" href="https://proxyxai.com">𝑷𝒓𝒐𝒙𝒚𝑿𝑨𝑰</a> and <a class="white" href="https://github.com/proxyxai/openai">github</a>'
 
 [[extra.footer.nav]]
 name = "Privacy"
@@ -138,6 +138,6 @@ url = "/privacy-policy/"
 weight = 10
 
 [[extra.footer.nav]]
-name = "Code of Conduct"
-url = "/docs/contributing/code-of-conduct/"
+name = "Terms of Service"
+url = "/tos/"
 weight = 20
