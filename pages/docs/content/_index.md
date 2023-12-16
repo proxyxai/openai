@@ -22,11 +22,11 @@ weight = 20
 
 [[extra.list]]
 title = "🔋 完美兼容"
-content = '与官方 𝑶𝒑𝒆𝒏𝑨𝑰 𝑨𝑷𝑰 一致,平滑接入'
+content = '与官方 OpenAI API 一致,平滑接入'
 
 [[extra.list]]
 title = "🔮 超级稳定"
-content = '独家方案屏蔽大部分 𝑶𝒑𝒆𝒏𝑨𝑰 429/502/503/522 等官方服务不稳定问题'
+content = '独家方案屏蔽大部分 OpenAI 429/502/503/522 等官方服务不稳定问题'
 
 [[extra.list]]
 title = "🏅 专属渠道"
@@ -42,6 +42,6 @@ content = "关键服务逻辑完全在内存中执行,确保了极速的响应�
 
 [[extra.list]]
 title = "🚦 安全设计"
-content = "零信任安全设计,即便是我们数据库管理者也无法获取账号 𝒌𝒆𝒚 信息"
+content = "零信任安全设计,即便是我们数据库管理者也无法获取账号 Key 数据"
 
 +++
