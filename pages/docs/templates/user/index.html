@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="https://static.proxyxai.com/openai/favicon.png"/>
   <link rel="mask-icon" href="https://static.proxyxai.com/openai/mask-icon.svg" color="#000000"/>
   <link rel="stylesheet" href="//static.proxyxai.com/tailwind.min.css">
-  <link rel="stylesheet" href="//sub.proxyxai.com/style.css">
+  <link rel="stylesheet" href="{{ get_url(path='user/style.css', trailing_slash=false) }}">
 {% endblock head %}
 
 {% block body %}
@@ -66,5 +66,5 @@
 		</div>
 		<div id="notificationContainer"></div>
 
-  <script src="{{ get_url(path='user/script.js') }}"></script>
+  <script src="{{ get_url(path='user/script.js', trailing_slash=false) }}"></script>
 {% endblock body %}
