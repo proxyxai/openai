@@ -49,7 +49,7 @@ Depends on the docker environment and docker-compose container management tool.
 
 ## Deployment Example
 
-We will use https://proxyxai.com as an example to illustrate the deployment and domain resource allocation structure.
+We will use [proxyxai.com](https://proxyxai.com) as an example to illustrate the deployment and domain resource allocation structure.
 
 - Deploy api.proxyxai.com, configure an nginx service to associate api.proxyxai.com 80/443 with the API service's 3443 port.
 - Deploy usage.proxyxai.com, configure nginx to associate usage.proxyxai.com requests with the pages/billing static file directory.
@@ -77,8 +77,6 @@ By default, the docker-compose.yml file sets OPENAI_API_BASE to api.openai.com. 
 ---
 
 # ProxyXAI-OpenAI (中文)
-
-https://proxyxai.com
 
 ProxyXAI 是一个可靠、高效且安全的 OpenAI API Keys 管理系统，为用户提供更好的 API 接入服务。它是一个消耗 OpenAI API Keys 的系统，输出稳定可靠的 API 接入服务。
 
@@ -129,7 +127,7 @@ graph TD
 
 ## 部署案例
 
-我们以 https://proxyxai.com 为例说明部署和域名资源分配结构。
+我们以 [proxyxai.com](https://proxyxai.com) 为例说明部署和域名资源分配结构。
 
 - 部署 api.proxyxai.com，nginx 配置一个服务将 api.proxyxai.com 80/443 关联到 API 服务的 3443 端口。
 - 部署 usage.proxyxai.com，nginx 配置 usage.proxyxai.com 请求关联到 pages/billing 静态文件目录。
