@@ -1,4 +1,4 @@
 +++
 title = "User"
-template = "user.html"
+template = "user/index.html"
 +++
