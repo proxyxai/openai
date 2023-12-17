@@ -93,7 +93,7 @@ facebook_author = ""
 ## JSON-LD
 [extra.schema]
 type = "Organization"
-logo = "images/train"
+logo = "images/logo.png"
 twitter = "https://twitter.com/proxyxai"
 linked_in = ""
 github = "https://github.com/proxyxai/openai"
