@@ -22,6 +22,7 @@ top = false
 
 ```bash
 curl -X POST -H "Authorization: Bearer $key" -d '{"Name": "child-1", "Email": "child-1@proxyxai.com", "CreditGranted": 100}' https://api.proxyxai.com/x-users
+curl -X POST -H "Authorization: Bearer $key" -d '{"Name": "child-1", "Email": "child-1@proxyxai.com", "CreditGranted": 100, "Alias": "昵称"}' https://api.proxyxai.com/x-users
 ```
 
 ### 响应
@@ -90,8 +91,10 @@ CreditGranted 预付卡充值额度 (如上默认创建并给予充值额度,所
 ```
 
 ```
-Name  账号名
-Email 账号邮箱
+Name  账号名(必须字段,唯一标识,不能重复,可以修改)
+Email 账号邮箱(必须字段,唯一标识,不能重复,可以修改)
+CreditGranted 预付卡充值额度(必须字段)
+Alias 子账号昵称,默认与Name一致(可选字段)
 HardLimit 月度用量硬限制,默认取自充值额度向上取整100,可以调小 (系统硬限制,使用超过该额度将禁止调用,可以根据业务需要调大)
 SoftLimit 月度用量软限制,默认取自充值额度向上取整100的80%,可以调小 (系统软限制,使用超过该额度将收到邮件提醒)
 RateLimit 最大请求次/分钟,默认继承自父账号,可以调小
