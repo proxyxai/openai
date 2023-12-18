@@ -53,6 +53,7 @@ curl -X POST -H "Authorization: Bearer $key" -d '{"Name": "child-1", "Email": "c
   },
   "User": {
     "ID": 7,
+	"Alias": "昵称",
     "Name": "child-1",
     "SecretKey": "sk-Xvszkap0gCd0mA8QlqgARLzutOHq0Pi7OZZnbfhTmxJ3zJsa",
     "Updates": {
