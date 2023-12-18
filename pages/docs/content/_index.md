@@ -22,11 +22,11 @@ weight = 20
 
 [[extra.list]]
 title = "🔋 完美接入"
-content = '与 OpenAI API 一致,支持与 OpenAI 兼容的各种生态项目'
+content = '支持与 OpenAI API 兼容的各种生态项目'
 
 [[extra.list]]
 title = "🪐 超级稳定"
-content = '屏蔽大部分 OpenAI 429/502/503/522 等官方服务不稳定问题'
+content = '屏蔽大部分 OpenAI 官方服务不稳定问题'
 
 [[extra.list]]
 title = "⚖️  按量计费"
@@ -42,5 +42,5 @@ content = "关键服务逻辑全部在内存执行,确保极速的响应"
 
 [[extra.list]]
 title = "🚦 安全设计"
-content = "零信任安全设计,内部数据库管理者也无法获取账号 Key 数据"
+content = "零信任安全设计,核心数据加密存储"
 +++
