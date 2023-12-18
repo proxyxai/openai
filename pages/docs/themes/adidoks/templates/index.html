@@ -8,7 +8,7 @@
   {% else %}
     {% set title = "" %}
   {% endif %}
-  
+
   {% if config.extra.title_addition and title %}
     {% set title_addition = title_separator ~ config.extra.title_addition %}
   {% elif config.extra.title_addition %}
@@ -16,9 +16,9 @@
   {% else %}
     {% set title_addition = "" %}
   {% endif %}
-  
+
   {% set description = config.description %}
-  
+
   {{ macros_head::seo(title=title, title_addition=title_addition, description=description, is_home=true) }}
 {% endblock seo %}
 
@@ -28,7 +28,7 @@
     <section class="section container-fluid mt-n3 pb-3">
       <div class="row justify-content-center">
         <div class="col-lg-12 text-center">
-          <img class="mb-4" width="250" src="/images/logo.png" />
+          <img class="mb-4" width="162" src="/images/logo.png" />
           <h1 class="mt-0 mb-1">{{ section.title | default(value="Modern Documentation Theme") }}</h1>
         </div>
         <div class="col-lg-9 col-xl-10 text-center">
@@ -54,7 +54,7 @@
         <div class="col-lg-5">
           <h2 class="h4">Security aware</h2>
           <p>Get A+ scores on <a href="https://observatory.mozilla.org/analyze/doks.netlify.app">Mozilla Observatory</a> out of the box. Easily change the default Security Headers to suit your needs.</p>
-        </div>      
+        </div>
         <div class="col-lg-5">
           <h2 class="h4">Fast by default ⚡️</h2>
           <p>Get 100 scores on <a href="https://googlechrome.github.io/lighthouse/viewer/?gist=7731347bb8ce999eff7428a8e763b637">Google Lighthouse</a> by default. Doks removes unused css, prefetches links, and lazy loads images.</p>
