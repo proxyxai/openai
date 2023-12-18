@@ -21,11 +21,11 @@ url = "/blog/"
 weight = 20
 
 [[extra.list]]
-title = "🔋 完美兼容"
-content = '与官方 OpenAI API 一致,支持与 𝑂𝑝𝑒𝑛𝐴𝐼 兼容的各种生态项目'
+title = "🔋 完美接入"
+content = '与 OpenAI API 一致,支持与 OpenAI 兼容的各种生态项目'
 
 [[extra.list]]
-title = "🔮 超级稳定"
+title = "🪐 超级稳定"
 content = '屏蔽大部分 OpenAI 429/502/503/522 等官方服务不稳定问题'
 
 [[extra.list]]
@@ -34,14 +34,13 @@ content = "与官方各模型费率表一致"
 
 [[extra.list]]
 title = "⚡️ 超高并发"
-content = "拥有处理超大规模请求的能力,系统拥有卓越的并发性能"
+content = "可处理超大规模请求,系统拥有卓越的并发性能"
 
 [[extra.list]]
 title = "🚀️ 极速响应"
-content = "关键服务逻辑全部在内存执行,确保极速的响应和卓越的效率"
+content = "关键服务逻辑全部在内存执行,确保极速的响应"
 
 [[extra.list]]
 title = "🚦 安全设计"
-content = "零信任安全设计,即便是我们数据库管理者也无法获取账号 Key 数据"
-
+content = "零信任安全设计,内部数据库管理者也无法获取账号 Key 数据"
 +++
