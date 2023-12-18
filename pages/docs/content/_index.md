@@ -29,8 +29,8 @@ title = "🔮 超级稳定"
 content = '屏蔽大部分 OpenAI 429/502/503/522 等官方服务不稳定问题'
 
 [[extra.list]]
-title = "🏅 专属渠道"
-content = "按量计费,与官方各模型费率比例一致,区别于 OpenAI 官网零售 API 价格,我们专属渠道价格更加实惠(约为官方2-3折)"
+title = "⚖️  按量计费"
+content = "与官方各模型费率表一致"
 
 [[extra.list]]
 title = "⚡️ 超高并发"
