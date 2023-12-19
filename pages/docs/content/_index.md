@@ -22,7 +22,7 @@ weight = 20
 
 [[extra.list]]
 title = "🔋 完美接入"
-content = '支持与 OpenAI API 兼容的各种生态项目'
+content = '支持与 OpenAI 兼容的各种生态项目'
 
 [[extra.list]]
 title = "🪐 超级稳定"
