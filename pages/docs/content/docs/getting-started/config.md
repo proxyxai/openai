@@ -21,9 +21,9 @@ top = false
 
 ## 使用示例
 
-### AMA (全终端)
+### BotGem (全终端)
 
-下载地址 [https://bytemyth.com/zh-CN/ama](https://bytemyth.com/zh-CN/ama)
+下载地址 [botgem.com](https://botgem.com)
 
 下载后打开设置页面，选中OpenAI，并输入平台提供的API Base和API Key即可。
 
