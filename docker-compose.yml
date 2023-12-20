@@ -21,7 +21,7 @@ services:
       - REDIS_PASS=
         # 每100次请求落盘Redis
       - STATS_INTERVAL=100
-        # 必选设置 初始root用户;格式 root:邮箱地址:管理Key;请注意管理Key为51个字符,开头必须是 sk-Xvs
+        # 必选设置 初始root用户;格式 root:邮箱地址:管理Key;请注意管理Key为51个字符,开头必须是 sk-Xvs, 初始用户名必须是 root
       - INIT_USERS=root:root@proxyxai.com:sk-XvsiLNxHImLIn0chuNDdi5wTs5WaoEWNcd87Z62etZZ1bz7z
         # 必须设置 OpenAI API 接入点
       - OPENAI_API_BASE=api.openai.com
@@ -29,7 +29,7 @@ services:
       - INIT_KEYS=
         # 开通子账号管理权限需要的最小额度
       - SUB_MIN_BALANCE=20
-        # 可选设置 一级域名,仅作为系统邮件模版页脚显示
+        # 可选设置 一级域名,请改成你自己的主域名,仅作为系统邮件模版页脚显示
       - XAI_SERVICE=proxyxai.com
         # 邮件通知不足额度提醒
       - EMAIL_BALANCE=3.00
