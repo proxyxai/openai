@@ -19,11 +19,11 @@ services:
       - POSTGRES_DSN=user=postgres password=pass host=proxyxai-postgres dbname=postgres port=5432 sslmode=disable TimeZone=Asia/Shanghai
       - REDIS_ADDR=proxyxai-redis:6379
       - REDIS_PASS=
-        # 每100次请求落盘Redis
+        # 100次请求/账号,数据落盘Redis,100*10次请求/账号,数据落盘PostgreSQL
       - STATS_INTERVAL=100
         # 必选设置 初始root用户;格式 root:邮箱地址:管理Key;请注意管理Key为51个字符,开头必须是 sk-Xvs, 初始用户名必须是 root
       - INIT_USERS=root:root@proxyxai.com:sk-XvsiLNxHImLIn0chuNDdi5wTs5WaoEWNcd87Z62etZZ1bz7z
-        # 必须设置 OpenAI API 接入点
+        # 必选设置 OpenAI API 接入点
       - OPENAI_API_BASE=api.openai.com
         # 可选设置 启动即刻录入OpenAI API Keys(也可以启动后,通过管理 API 操作录入),如果 OPENAI_API_BASE 不是 api.openai.com,则需要录入自定义节点的 Keys;格式 sk-xxx,sk-xxx,sk-xxx
       - INIT_KEYS=
