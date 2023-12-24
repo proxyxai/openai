@@ -12,6 +12,9 @@ toc = true
 top = false
 +++
 
-<center>
-<img width="300" src="https://static.xabcnews.com/WechatProxyXAI.jpg"/>
-</center>
+<table>
+  <tr>
+    <td><img width="256" src="https://static.proxyxai.com/PaymentProxyXAI.jpg" /></td>
+    <td><img width="256" src="https://static.proxyxai.com/WechatProxyXAI.jpg" /></td>
+  </tr>
+</table>
