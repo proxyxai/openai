@@ -14,7 +14,7 @@ top = false
 
 <table>
   <tr>
-    <td><img width="256" src="https://static.proxyxai.com/PaymentProxyXAI.jpg" /></td>
     <td><img width="256" src="https://static.proxyxai.com/WechatProxyXAI.jpg" /></td>
+    <td><img width="256" src="https://static.proxyxai.com/PaymentProxyXAI.jpg" /></td>
   </tr>
 </table>
