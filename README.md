@@ -156,12 +156,11 @@ graph TD
 
 ## 赞赏
 
-<div style="display: flex; gap: 20px;">
-	<div style="text-align: center">
-		<img style="width: 200px" src="https://static.proxyxai.com/PaymentProxyXAI.jpg" alt="微信" />
-		<p>WeChat Pay</p>
-	</div>
-</div>
+<table>
+  <tr>
+    <td><img width="256" src="https://static.proxyxai.com/PaymentProxyXAI.jpg" /></td>
+  </tr>
+</table>
 
 ## 鸣谢
 
