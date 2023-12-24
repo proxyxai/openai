@@ -72,6 +72,10 @@ For more API management details, please read [proxyxai.com](https://proxyxai.com
 
 By default, the docker-compose.yml file sets OPENAI_API_BASE to api.openai.com. Therefore, you need to input the OpenAI API Keys obtained from the official OpenAI platform. If you need to use API Keys from other proxy providers, you should change OPENAI_API_BASE to the corresponding service node address, such as api.xxx.xxx. We call this usage method "multi-level cascading deployment," while the default method of proxying to the official node api.openai.com is called "single-level cascading deployment."
 
+## Donation
+
+[Buy Me a Coffee](https://www.buymeacoffee.com/proxyxai)
+
 ## Special Thanks
 
 [openai.com](https://openai.com)
@@ -149,6 +153,15 @@ graph TD
 ## 特别说明
 
 默认情况下，docker-compose.yml 文件里将 OPENAI_API_BASE 设置为 api.openai.com, 因此，您需要输入从官方 OpenAI 平台获取的 OpenAI API Keys,如果您需要使用来自其他代理提供商的 API Key，您应将 OPENAI_API_BASE 更改为相应的服务节点地址，例如 api.xxx.xxx, 我们将这种使用方法称为“多级串联部署”，而默认代理到官方节点 api.openai.com 的方法称为“一级串联部署”。
+
+## 赞赏
+
+<div style="display: flex; gap: 20px;">
+	<div style="text-align: center">
+		<img style="width: 200px" src="https://static.proxyxai.com/PaymentProxyXAI.jpg" alt="微信" />
+		<p>WeChat Pay</p>
+	</div>
+</div>
 
 ## 鸣谢
 
