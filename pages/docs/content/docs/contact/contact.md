@@ -13,5 +13,5 @@ top = false
 +++
 
 <center>
-<img width="150" src="https://static.xabcnews.com/WechatProxyXAI.jpg"/>
+<img src="https://static.xabcnews.com/WechatProxyXAI.jpg"/>
 </center>
