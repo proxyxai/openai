@@ -30,7 +30,7 @@ content = '屏蔽大部分 OpenAI 官方服务不稳定问题'
 
 [[extra.list]]
 title = "⚖️  按量计费"
-content = "与官方各模型费率表一致"
+content = "与官方各模型费率表计算一致,计费是2倍率换算"
 
 [[extra.list]]
 title = "⚡️ 超高并发"
