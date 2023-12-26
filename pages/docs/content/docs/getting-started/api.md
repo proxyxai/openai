@@ -1,7 +1,7 @@
 +++
 title = "API 说明"
-date = 2021-05-01T08:00:00+00:00
-updated = 2021-05-01T08:00:00+00:00
+date = 2023-08-01T08:00:00+00:00
+updated = 2023-12-26T08:00:00+00:00
 draft = false
 weight = 4
 sort_by = "weight"
@@ -612,4 +612,21 @@ curl -X PUT -H "Authorization: Bearer $key" -d '{"Alias": "bob"}' https://api.pr
 
 <div class="infobox">
 在创建子账号的过程中，账号名称和邮箱地址的唯一性是系统默认的强制要求，这确保了每个账号的独立性和安全性。简言之，同一邮箱不能被用来注册多个账号。然而，与此相反的是，账单邮箱的设置则灵活得多。系统允许多个账号共用同一账单邮箱地址，这样做的好处是父账号可以将多个子账号的账单和系统通知集中到一个邮箱里，便于用户统一管理和查阅，大大提升了管理效率和用户体验。此外，账号别名的个性化设置允许用户以更具特色的方式标识和区分各个账号。通过这样的设计，用户能够更加方便地掌握各个账号的财务和通知信息，从而实现高效的账号管理。
+</div>
+
+## 15. 访问控制: 添加/删除子账号的可信IP白名单
+
+### 请求
+
+```bash
+curl -X PUT -H "Authorization: Bearer $key" -d '{"AllowIP": "49.234.158.212"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"AllowIP": "118.23.21.0/24"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyIP": "49.234.158.212"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyIP": "118.23.21.0/24"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"AllowIP": "*"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyIP": "*"}' https://api.proxyxai.com/x-users/child-1
+```
+
+<div class="infobox">
+默认情况下，不限制调用来源IP。如果企业需要对子账号实施访问控制，可以设置子账号仅在可信来源IP集合内进行调用。支持CIDR格式。请注意，AllowIP: "*" 表示恢复为默认不限制，而 DenyIP: "*" 表示仅允许 127.0.0.1 调用。
 </div>
