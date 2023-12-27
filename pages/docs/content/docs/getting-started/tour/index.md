@@ -49,6 +49,7 @@ Key 池录入了若干个不同高级别账户创建的 OpenAI API Keys，有效
 | 愚公(备) | api.proxyxai.cn                | sk-XvsQOaJBbqNYi0Oli2iyAqSeiL2fet1mPxXa01pA5TeuQoma            |
 
 <div class="infobox">
+
 如果您是开发者,只需将SDK中的API端点 <b>api.openai.com</b> 更改为 <b>api.proxyxai.com</b>,然后将 key 设置愚公提供的 key 即可, 请注意上面开发/测试 key 有模型和速率限制以及访问控制限制,只可以在 [chat.proxyxai.com](https://chat.proxyxai.com) 测试使用
 
 特别提醒,随着 𝑨𝑰 技术日新月异的发展和普及,𝑶𝒑𝒆𝒏𝑨𝑰 服务访问量日益激增,官方服务不稳定是常态,遇到长时间调用失败的时候,请先看看官方的服务状态页了解情况 [status.openai.com](https://status.openai.com)
