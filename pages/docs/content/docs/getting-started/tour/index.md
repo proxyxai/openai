@@ -64,8 +64,12 @@ Key 池录入了若干个不同高级别账户创建的 OpenAI API Keys，有效
 
 ### 系统服务
 
-- [余额查询](https://usage.proxyxai.com)
-- [子账号](https://sub.proxyxai.com)
+- [余额查询1](https://usage.open-assistant.cn)
+- [余额查询2](https://usage.proxyxai.com)
+- [余额查询3](https://usage.proxyxai.cn)
+- [子账号1](https://sub.proxyxai.com)
+- [子账号2](https://sub.proxyxai.cn)
+- [子账号3](https://sub.open-assistant.cn)
 
 ### 概述
 
