@@ -117,7 +117,7 @@ weight = 20
 
 [[extra.menu.social]]
 name = "X"
-pre = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 1226.4 1227" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-logo-x"><path d="m675 561.8 241.8-284.1h-57.3l-210 246.7-167.7-246.7h-193.4l253.6 373-253.6 297.9h57.3l221.7-260.5 177.1 260.5h193.4zm-78.5 92.2-25.7-37.1-204.4-295.6h88l165 238.5 25.7 37.1 214.4 310h-88z" fill="#000"/></svg>'
+pre = '<svg width="300" height="300.251" version="1.1" xmlns="http://www.w3.org/2000/svg"> <path d="M178.57 127.15 290.27 0h-26.46l-97.03 110.38L89.34 0H0l117.13 166.93L0 300.25h26.46l102.4-116.59 81.8 116.59h89.34M36.01 19.54H76.66l187.13 262.13h-40.66"/> </svg>'
 url = "https://x.com/proxyxai"
 weight = 10
 
