@@ -645,5 +645,5 @@ curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyModels": "*"}' https://api
 ```
 
 <div class="infobox">
-默认情况下，不限制调用来源IP。如果企业需要对子账号实施访问控制，可以设置子账号仅在可信来源IP集合内进行调用。支持CIDR格式。请注意，AllowModels: "*" 表示恢复为默认不限制，而 DenyModels: "*" 表示禁止所有模型调用。
+默认情况下，不限制调用模型。如果企业需要对子账号实施访问控制，可以设置子账号仅在允许的模型集合内进行调用。请注意，AllowModels: "*" 表示恢复为默认不限制，而 DenyModels: "*" 表示禁止所有模型调用。
 </div>
