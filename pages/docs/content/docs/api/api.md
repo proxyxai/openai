@@ -619,14 +619,31 @@ curl -X PUT -H "Authorization: Bearer $key" -d '{"Alias": "bob"}' https://api.pr
 ### 请求
 
 ```bash
-curl -X PUT -H "Authorization: Bearer $key" -d '{"AllowIP": "49.234.158.212"}' https://api.proxyxai.com/x-users/child-1
-curl -X PUT -H "Authorization: Bearer $key" -d '{"AllowIP": "118.23.21.0/24"}' https://api.proxyxai.com/x-users/child-1
-curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyIP": "49.234.158.212"}' https://api.proxyxai.com/x-users/child-1
-curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyIP": "118.23.21.0/24"}' https://api.proxyxai.com/x-users/child-1
-curl -X PUT -H "Authorization: Bearer $key" -d '{"AllowIP": "*"}' https://api.proxyxai.com/x-users/child-1
-curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyIP": "*"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"AllowIPs": "49.234.158.212"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"AllowIPs": "118.23.21.0/24 119.24.12.11"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyIPs": "49.234.158.212"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyIPs": "118.23.21.0/24 119.24.12.11"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"AllowIPs": "*"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyIPs": "*"}' https://api.proxyxai.com/x-users/child-1
 ```
 
 <div class="infobox">
-默认情况下，不限制调用来源IP。如果企业需要对子账号实施访问控制，可以设置子账号仅在可信来源IP集合内进行调用。支持CIDR格式。请注意，AllowIP: "*" 表示恢复为默认不限制，而 DenyIP: "*" 表示仅允许 127.0.0.1 调用。
+默认情况下，不限制调用来源IP。如果企业需要对子账号实施访问控制，可以设置子账号仅在可信来源IP集合内进行调用。支持CIDR格式。请注意，AllowIPs: "*" 表示恢复为默认不限制，而 DenyIPs: "*" 表示仅允许 127.0.0.1 调用。
+</div>
+
+## 16. 访问控制: 添加/删除子账号的Model白名单
+
+### 请求
+
+```bash
+curl -X PUT -H "Authorization: Bearer $key" -d '{"AllowModels": "gpt-3.5-turbo"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"AllowModels": "gpt-3.5-turbo gpt-4"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyModels": "gpt-3.5-turbo"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyModels": "gpt-3.5-turbo gpt-4"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"AllowModels": "*"}' https://api.proxyxai.com/x-users/child-1
+curl -X PUT -H "Authorization: Bearer $key" -d '{"DenyModels": "*"}' https://api.proxyxai.com/x-users/child-1
+```
+
+<div class="infobox">
+默认情况下，不限制调用来源IP。如果企业需要对子账号实施访问控制，可以设置子账号仅在可信来源IP集合内进行调用。支持CIDR格式。请注意，AllowModels: "*" 表示恢复为默认不限制，而 DenyModels: "*" 表示禁止所有模型调用。
 </div>
